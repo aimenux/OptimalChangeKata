@@ -1,3 +1,5 @@
+[![.NET 5](https://github.com/aimenux/OptimalChangeKata/actions/workflows/ci.yml/badge.svg)](https://github.com/aimenux/OptimalChangeKata/actions/workflows/ci.yml)
+
 # OptimalChangeKata
 ```
 Kata about the optimal way to give back amount with the minimum number of coins
@@ -39,9 +41,9 @@ Kata about the optimal way to give back amount with the minimum number of coins
 >
 > **Constraints**
 >
->> :low_brightness: `money` is a `long`.
+>> :zap: `money` is a `long`.
 >>
->> :low_brightness: 0 < `money` <= 9223372036854775807
+>> :zap: 0 < `money` <= 9223372036854775807
 >
 >
 
