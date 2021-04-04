@@ -8,6 +8,7 @@ Kata about the optimal way to give back amount with the minimum number of coins
 > It's an issue that each of us encounters on a daily basis and the problem is the same for automated checkout machines.
 >
 > In this exercise, you are asked to try and find an optimal solution for returning change in a very specific case : 
+>
 >> :zap: When the machine contains only €2 coins, €5 coins and €10 coins. 
 >> :zap: We imagine that coins are available in unlimited quantities.
 >
