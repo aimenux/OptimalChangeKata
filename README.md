@@ -8,25 +8,26 @@ Kata about the optimal way to give back amount with the minimum number of coins
 > It's an issue that each of us encounters on a daily basis and the problem is the same for automated checkout machines.
 >
 > In this exercise, you are asked to try and find an optimal solution for returning change in a very specific case : 
-> When the machine contains only €2 coins, €5 coins and €10 coins. We imagine that all of these coins are available in unlimited quantities.
+>> :zap: When the machine contains only €2 coins, €5 coins and €10 coins. 
+>> :zap: We imagine that coins are available in unlimited quantities.
 >
-> Here are some examples of how change may be returned:
+> Here are some examples of how change may be returned :
 >
 > :pushpin: Change For €1:
->>       :zap: Possible Solutions: Impossible
->>       :zap: Optimal Solution:   Impossible
+>>       Possible Solutions: Impossible
+>>       Optimal Solution:   Impossible
 >
 > :pushpin: Change For €6:
->>       :zap: Possible Solutions: €2 + €2 + €2
->>       :zap: Optimal Solution:   €2 + €2 + €2
+>>       Possible Solutions: €2 + €2 + €2
+>>       Optimal Solution:   €2 + €2 + €2
 >
 > :pushpin: Change For €10:
->>       :zap: Possible Solutions: €2 + €2 + €2 + €2 + €2 | €5 + €5 | €10
->>       :zap: Optimal Solution:   €10
+>>       Possible Solutions: €2 + €2 + €2 + €2 + €2 | €5 + €5 | €10
+>>       Optimal Solution:   €10
 >
 > :pushpin: Change For €9223372036854775807:
->>       :zap: Possible Solutions: ...
->>       :zap: Optimal Solution:   (€10 * 922337203685477580)+ €5 + €2
+>>       Possible Solutions: ...
+>>       Optimal Solution:   (€10 * 922337203685477580)+ €5 + €2
 >
 > Implement the `ComputeOptimalCurrency(long money)` method which returns a `Currency` object.
 > This object has three properties `TwoCoins`, `FiveCoins` and `TenCoins` which represents the numbers of €2 coins, €5 coins and €10 coins.
