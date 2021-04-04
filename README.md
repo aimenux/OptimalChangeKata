@@ -5,10 +5,9 @@
 Kata about the optimal way to give back amount with the minimum number of coins
 ```
 >
-> One of the problems presented by cash transactions is how to return change.
+> :writing_hand: One of the problems presented by cash transactions is how to return change.
 > What is the optimal way to give back a certain amount with the minimum number of coins.
 > It's an issue that each of us encounters on a daily basis and the problem is the same for automated checkout machines.
->
 > In this exercise, you are asked to try and find an optimal solution for returning change in a very specific case : 
 >
 >> :zap: When the machine contains only €2 coins, €5 coins and €10 coins. 
@@ -33,7 +32,7 @@ Kata about the optimal way to give back amount with the minimum number of coins
 >>       Possible Solutions: ...
 >>       Optimal Solution:   (€10 * 922337203685477580)+ €5 + €2
 >
-> Implement the `ComputeOptimalCurrency(long money)` method which returns a `Currency` object.
+> :writing_hand: Implement the `ComputeOptimalCurrency(long money)` method which returns a `Currency` object.
 > This object has three properties `TwoCoins`, `FiveCoins` and `TenCoins` which represents the numbers of €2 coins, €5 coins and €10 coins.
 > The sum of coins indicated in the `Currency` object must be `money`. 
 > If it is not possible to give back change the method must return `null`.
