@@ -33,7 +33,7 @@ Kata about the optimal way to give back amount with the minimum number of coins
 >>       Optimal Solution:   (€10 * 922337203685477580)+ €5 + €2
 >
 > Implement the `ComputeOptimalCurrency(long money)` method which returns a `Currency` object.
-> This object has three properties `TwoCoins`, `FiveCoins` and `TenCoins` which represents coins for `€2`, `€5` and `€10`.
+> This object has properties `TwoCoins`, `FiveCoins` and `TenCoins` which represents coins for `€2`, `€5` and `€10`.
 > The sum of coins indicated in the `Currency` object must be equal to `money`.
 > If it is not possible to give back change, the method must return `null`.
 > The solution (when possible) should have the minimal number of coins.
