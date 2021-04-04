@@ -38,8 +38,10 @@ Kata about the optimal way to give back amount with the minimum number of coins
 > The solution (when possible) should have the minimal number of coins.
 >
 > **Constraints**
->> :pushpin: `money` is a `long`.
->> :pushpin: 0 < `money` <= 9223372036854775807
+>
+>> :low_brightness: `money` is a `long`.
+>>
+>> :low_brightness: 0 < `money` <= 9223372036854775807
 >
 >
 
