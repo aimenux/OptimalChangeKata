@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lib", "SolutionOne\Lib\Lib.
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionOne", "SolutionOne", "{98869DB3-F983-493F-B066-02813D1DE88D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{5B32709E-5400-4260-965A-68B16458B656}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "SolutionOne\Tests\Tests.csproj", "{5B32709E-5400-4260-965A-68B16458B656}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1587DCBF-2D67-49EA-96A5-4C1AE4508033}"
 	ProjectSection(SolutionItems) = preProject
