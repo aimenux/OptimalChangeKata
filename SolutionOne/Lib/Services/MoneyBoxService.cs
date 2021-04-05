@@ -9,38 +9,35 @@ namespace Lib.Services
         public Currency ComputeOptimalCurrency(long money)
         {
             var rest = Guard.Against.NegativeOrZero(money, nameof(money));
-            var tenCoins = GetTenCoins(ref rest);
-            var fiveCoins = GetFiveCoins(ref rest);
-            var twoCoins = GetTwoCoins(ref rest);
-            var currency = new Currency(twoCoins, fiveCoins, tenCoins);
-            return currency.TotalMoney == money ? currency : null;
-        }
 
-        private static long GetTenCoins(ref long rest)
-        {
             var tenCoins = rest / TenCoinValue;
             rest %= TenCoinValue;
-            return tenCoins;
-        }
-
-        private static long GetFiveCoins(ref long rest)
-        {
-            var fiveCoins = rest / FiveCoinValue;
-
-            if (rest % FiveCoinValue == 0 || rest % FiveCoinValue % TwoCoinValue == 0)
+            if (rest % TwoCoinValue == 1 && rest < FiveCoinValue)
             {
-                rest %= FiveCoinValue;
-                return fiveCoins;
+                tenCoins -= 1;
+                rest += TenCoinValue;
             }
 
-            return 0;
-        }
+            var fiveCoins = rest / FiveCoinValue;
+            rest %= FiveCoinValue;
+            if (rest % TwoCoinValue == 1 && rest < FiveCoinValue)
+            {
+                fiveCoins -= 1;
+                rest += FiveCoinValue;
+            }
 
-        private static long GetTwoCoins(ref long rest)
-        {
+
             var twoCoins = rest / TwoCoinValue;
             rest %= TwoCoinValue;
-            return twoCoins;
+
+            var solutionExists = rest == 0
+                                 && twoCoins >= 0
+                                 && fiveCoins >= 0
+                                 && tenCoins >= 0;
+
+            return solutionExists 
+                ? new Currency(twoCoins, fiveCoins, tenCoins) 
+                : null;
         }
     }
 }

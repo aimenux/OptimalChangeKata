@@ -25,17 +25,14 @@ namespace Tests.Services
         }
 
         [TestCase(1)]
-        [TestCase(11)]
-        [TestCase(13)]
-        [TestCase(21)]
-        [TestCase(121)]
+        [TestCase(3)]
         public void Should_Get_Null_When_Compute_Optimal_Currency_Is_Impossible(long money)
         {
             // arrange
-            var moneyBox = new MoneyBoxService();
+            var service = new MoneyBoxService();
 
             // act
-            var currency = moneyBox.ComputeOptimalCurrency(money);
+            var currency = service.ComputeOptimalCurrency(money);
 
             // assert
             currency.Should().BeNull();
@@ -49,7 +46,9 @@ namespace Tests.Services
         [TestCase(08, 4, 0, 0)]
         [TestCase(09, 2, 1, 0)]
         [TestCase(10, 0, 0, 1)]
+        [TestCase(11, 3, 1, 0)]
         [TestCase(12, 1, 0, 1)]
+        [TestCase(13, 4, 1, 0)]
         [TestCase(14, 2, 0, 1)]
         [TestCase(15, 0, 1, 1)]
         [TestCase(16, 3, 0, 1)]
@@ -57,6 +56,11 @@ namespace Tests.Services
         [TestCase(18, 4, 0, 1)]
         [TestCase(19, 2, 1, 1)]
         [TestCase(20, 0, 0, 2)]
+        [TestCase(21, 3, 1, 1)]
+        [TestCase(22, 1, 0, 2)]
+        [TestCase(23, 4, 1, 1)]
+        [TestCase(24, 2, 0, 2)]
+        [TestCase(25, 0, 1, 2)]
         public void Should_Compute_Optimal_Currency_When_Is_Possible(
             long money,
             long expectedTwoCoins,
@@ -64,10 +68,10 @@ namespace Tests.Services
             long expectedTenCoins)
         {
             // arrange
-            var moneyBox = new MoneyBoxService();
+            var service = new MoneyBoxService();
 
             // act
-            var currency = moneyBox.ComputeOptimalCurrency(money);
+            var currency = service.ComputeOptimalCurrency(money);
 
             // assert
             currency.Should().NotBeNull();
