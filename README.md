@@ -1,7 +1,5 @@
 [![.NET 5](https://github.com/aimenux/OptimalChangeKata/actions/workflows/ci.yml/badge.svg)](https://github.com/aimenux/OptimalChangeKata/actions/workflows/ci.yml)
 
-[![SonarCloud](https://sonarcloud.io/images/project_badges/sonarcloud-orange.svg)](https://sonarcloud.io/dashboard?id=OptimalChangeKataKey)
-
 # OptimalChangeKata
 ```
 Kata about the optimal way to give back amount with the minimum number of coins
