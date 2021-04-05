@@ -32,7 +32,11 @@ jobs:
       with:
         fetch-depth: 0
     - name: SonarCloud Scan
-      uses: sonarsource/sonarcloud-github-action@master
+      uses: highbyte/sonarscan-dotnet@2.0
+      with:
+        sonarProjectKey: OptimalChangeKataKey
+        sonarProjectName:  OptimalChangeKata
+        sonarOrganization: aimenux-sonar-cloud-key
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
