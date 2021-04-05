@@ -61,6 +61,12 @@ namespace Tests.Services
         [TestCase(23, 4, 1, 1)]
         [TestCase(24, 2, 0, 2)]
         [TestCase(25, 0, 1, 2)]
+        [TestCase(26, 3, 0, 2)]
+        [TestCase(27, 1, 1, 2)]
+        [TestCase(28, 4, 0, 2)]
+        [TestCase(29, 2, 1, 2)]
+        [TestCase(30, 0, 0, 3)]
+        [TestCase(31, 3, 1, 2)]
         public void Should_Compute_Optimal_Currency_When_Is_Possible(
             long money,
             long expectedTwoCoins,
