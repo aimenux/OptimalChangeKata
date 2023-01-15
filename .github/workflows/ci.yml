@@ -1,4 +1,4 @@
-name: .NET 5
+name: .NET
 
 on:
 
@@ -16,7 +16,7 @@ jobs:
     - name: Setup .NET
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: 5.0.x
+        dotnet-version: 7.0.x
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
@@ -32,7 +32,7 @@ jobs:
       with:
         fetch-depth: 0
     - name: SonarCloud Scan
-      uses: highbyte/sonarscan-dotnet@2.0
+      uses: highbyte/sonarscan-dotnet@v2.2.1
       with:
         sonarProjectKey: OptimalChangeKataKey
         sonarProjectName:  OptimalChangeKata
