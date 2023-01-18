@@ -1,4 +1,5 @@
-[![.NET 5](https://github.com/aimenux/OptimalChangeKata/actions/workflows/ci.yml/badge.svg)](https://github.com/aimenux/OptimalChangeKata/actions/workflows/ci.yml)
+[![.NET](https://github.com/aimenux/OptimalChangeKata/actions/workflows/ci.yml/badge.svg)](https://github.com/aimenux/OptimalChangeKata/actions/workflows/ci.yml)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=OptimalChangeKata-Key&metric=coverage)](https://sonarcloud.io/summary/new_code?id=OptimalChangeKata-Key)
 
 # OptimalChangeKata
 ```
