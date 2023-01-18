@@ -24,7 +24,7 @@ jobs:
     - name: Build
       run: dotnet build --no-restore
     - name: Test
-      run: dotnet test --no-build --verbosity normal
+      run: dotnet test --no-build
 
   sonar:
     needs: build
@@ -36,8 +36,8 @@ jobs:
     - name: SonarCloud Scan
       uses: highbyte/sonarscan-dotnet@v2.2.1
       with:
-          sonarProjectKey: OptimalChangeKataKey
           sonarProjectName:  OptimalChangeKata
+          sonarProjectKey: OptimalChangeKata-Key
           sonarOrganization: aimenux-sonar-cloud-key
           dotnetTestArguments: --logger trx --collect:"XPlat Code Coverage" -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=opencover
           sonarBeginArguments: /d:sonar.cs.opencover.reportsPaths="**/**/TestResults/**/coverage.opencover.xml" /d:sonar.cs.vstest.reportsPaths="**/**/TestResults/*.trx"
